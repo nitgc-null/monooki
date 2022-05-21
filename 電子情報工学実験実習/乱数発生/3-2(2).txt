@@ -1,0 +1,21 @@
+Enter a natural number greater than or equal to 100! : 9
+　 　 ＿＿＿＿＿＿
+　  ／  ●   ● ／
+　／　  ● 　 ／
+／ ●　 ●　／
+￣￣￣￣￣￣
+
+Enter a natural number greater than or equal to 100! : 25
+　 　 ＿＿＿＿＿＿
+　  ／　 　 ●  ／
+　／　  ●　  ／
+／　●　 　 ／
+￣￣￣￣￣￣
+
+Enter a natural number greater than or equal to 100! : 69
+　 　 ＿＿＿＿＿＿
+　  ／.● ● ●.／
+　／  　 　　 ／
+／.● ● ●.／
+￣￣￣￣￣￣
+
