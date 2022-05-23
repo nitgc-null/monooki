@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main() 
+int main()
 {
     int score[5][6]; //成績格納用配列
     int ave = 0;
@@ -16,7 +16,7 @@ int main()
 
     for (int i = 0; i < 5; i++)
     {
-        ave = (score[i][0] + score[i][1] + score[i][2] + score[i][3] + score[i][4] + score[i][5]) / 6;
-        printf("|    %d |   %d |   %d |   %d |   %d |   %d |  %d |\n", score[i][0], score[i][1], score[i][2], score[i][3], score[i][4], score[i][5], ave);
+        ave = (score[i][1] + score[i][2] + score[i][3] + score[i][4] + score[i][5]) / 5;
+        printf("|%5d |%5d |%5d |%5d |%5d |%5d |%4d |\n", score[i][0], score[i][1], score[i][2], score[i][3], score[i][4], score[i][5], ave);
     }
 }
