@@ -1,0 +1,20 @@
+ ; アセンブリ言語例題(３)
+ ; LEDを点滅させる
+ 		.CPU	300HA
+PBDDR	.EQU	H'EE00A
+PBDR	.EQU	H'FFFDA ;micromboard VPE <-> I/O board VP2
+		.SECTION	PROG,DATA,LOCATE=H'00000
+		.DATA.L	RESET
+		.SECTION	P,CODE,LOCATE=H'00800
+RESET:	MOV.L	#H'FFFF00,ER7 ;SPセット
+		MOV.B	#H'FF,R0L
+		MOV.B	R0L,@PBDDR	;PB = 出力
+		MOV.B	#H'AC,R0L	;出力初期値
+LOOP:	MOV.B	R0L,@PBDR	;PBから出力
+		MOV.L	#D'3125000,ER6	;1秒タイマーセット
+TIMER:	NOP	;時間調整
+		DEC.L	#1,ER6 ;ER6を1減らす
+		BNE	TIMER	;ER6 != 0
+		NOT.B	R0L	;論理反転
+		JMP	@LOOP	;無限ループ
+		.END

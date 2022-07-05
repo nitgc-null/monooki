@@ -1,0 +1,27 @@
+Optimizing Linkage Editor (V.9.05.01.000)         23-Jun-2022 10:04:32
+
+*** Options ***
+
+-subcommand=H:\マイコン\buckup\20220616Q2\20220616Q2\Debug\20220616Q2.hlk
+-noprelink
+-nomessage
+-list="H:\マイコン\buckup\20220616Q2\20220616Q2\Debug\20220616Q2.map"
+-nooptimize
+-start=P/0800,Stack/0FFD00
+-nologo
+-input="H:\マイコン\buckup\20220616Q2\20220616Q2\Debug\stacksct.obj"
+-output="H:\マイコン\buckup\20220616Q2\20220616Q2\Debug\20220616Q2.abs"
+-end
+
+*** Error information ***
+
+** L1100 (W) Cannot find "Stack" specified in option "start"
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+PROG
+                                  00000000  00000003         4   0
+P
+                                  00000800  00000837        38   0

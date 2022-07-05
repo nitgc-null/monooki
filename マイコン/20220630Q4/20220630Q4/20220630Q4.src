@@ -1,0 +1,34 @@
+ ; アセンブリ言語例題(4)
+ ; 論理演算命令による入力チェック
+ 		.CPU	300HA
+PADDR	.EQU	H'EE009
+PBDDR	.EQU	H'EE00A
+PADR	.EQU	H'FFFD9 ;micromboard VPT <-> I/O board VP3
+PBDR	.EQU	H'FFFDA ;micromboard VPE <-> I/O board VP2
+		.SECTION	PROG,DATA,LOCATE=H'00000
+		.DATA.L	RESET
+		.SECTION	P,CODE,LOCATE=H'00800
+RESET:	MOV.L	#H'FFFF00,ER7 ;SPセット
+		MOV.B	#H'00,R0L
+		MOV.B	R0L,@PADDR	;PA入力
+		MOV.B	#H'FF,R0L
+		MOV.B	R0L,@PBDDR	;PB出力
+		MOV.B	#H'0F,R0L	;出力初期値
+ ; 入力チェック
+CHK:	MOV.B	@PADR,R0H
+		AND.B	#H'01,R0H	;PA0 チェック
+		BEQ		CHK			;PA0 = 0
+ ; 出力開始
+LOOP:	MOV.B	R0L,@PBDR
+		MOV.L	#D'3125000,ER6	;1秒タイマーセット
+TIMER:	NOP
+		DEC.L	#1,ER6 ;ER6を1減らす
+		BNE		TIMER	;ERが0になるまで繰り返し
+		NOT.B	R0L	;全ビット反転
+		MOV.B	@PADR,R0H
+		AND.B	#H'02,R0H
+		BEQ		LOOP		
+		JMP		@STOP
+STOP:	NOP
+		JMP		@STOP
+		.END

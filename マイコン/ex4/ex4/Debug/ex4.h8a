@@ -1,0 +1,8 @@
+"H:\マイコン\ex4\ex4\ex4.src"
+-cpu=300HA:20
+-debug
+-object="H:\マイコン\ex4\ex4\Debug\ex4.obj"
+-nolist
+-nologo
+-chgincpath
+-errorpath

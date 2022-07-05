@@ -1,0 +1,8 @@
+"H:\マイコン\20220630Q4\20220630Q4\20220630Q4.src"
+-cpu=300HA:20
+-debug
+-object="H:\マイコン\20220630Q4\20220630Q4\Debug\20220630Q4.obj"
+-nolist
+-nologo
+-chgincpath
+-errorpath

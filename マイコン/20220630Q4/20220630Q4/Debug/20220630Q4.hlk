@@ -1,0 +1,14 @@
+-noprelink
+-nomessage
+-list="H:\マイコン\20220630Q4\20220630Q4\Debug\20220630Q4.map"
+-nooptimize
+-start=P/0800,Stack/0FFD00
+-nologo
+-input="H:\マイコン\20220630Q4\20220630Q4\Debug\20220630Q4.obj"
+-input="H:\マイコン\20220630Q4\20220630Q4\Debug\stacksct.obj"
+-output="H:\マイコン\20220630Q4\20220630Q4\Debug\20220630Q4.abs"
+-end
+-input="H:\マイコン\20220630Q4\20220630Q4\Debug\20220630Q4.abs"
+-form=stype
+-output="H:\マイコン\20220630Q4\20220630Q4\Debug\20220630Q4.mot"
+-exit

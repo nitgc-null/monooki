@@ -1,0 +1,8 @@
+"H:\マイコン\ex3\ex3\ex3.src"
+-cpu=300HA:20
+-debug
+-object="H:\マイコン\ex3\ex3\Debug\ex3.obj"
+-nolist
+-nologo
+-chgincpath
+-errorpath
